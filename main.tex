@@ -1,248 +1,148 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.1 (30/4/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% TODO:
-% 1. Integrate biber/bibtex for article citation under publications.
-% 2. Figure out a smoother way for the document to flow onto the next page.
-% 3. Add styling information for a "Projects/Hacks" section.
-% 4. Add location/address information
-% 5. Merge OpenFont and MacFonts as a single sty with options.
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% CHANGELOG:
-% v1.1:
-% 1. Fixed several compilation bugs with \renewcommand
-% 2. Got Open-source fonts (Windows/Linux support)
-% 3. Added Last Updated
-% 4. Move Title styling into .sty
-% 5. Commented .sty file.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Known Issues:
-% 1. Overflows onto second page if any column's contents are more than the
-% vertical limit
-% 2. Hacky space on the first bullet point on the second column.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[]{deedy-resume-openfont}
-
-
+\usepackage[framemethod=tikz]{mdframed}
 \begin{document}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     LAST UPDATED DATE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\namesection{Manisha}{Singh}{
-\location{\qquad \qquad \qquad \qquad \quad \qquad \qquad  }
-\href{mailto:manisha@kaist.ac.kr}{manisha@kaist.ac.kr} | +852 93845604
+\namesection{Pavan Kumar}{Basheerabad}{
+%\location{\qquad \qquad \qquad \qquad \quad \qquad \qquad  }
+\href{mailto:pb14e@my.fsu.edu}{pb14e@my.fsu.edu} | +1 850-296-6465
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center} 
+\textit {Masters Graduate with 3+ years of Professional Experience in Business Intelligence and Data Warehousing. Proficient in PL/SQL, T-SQL, Designing ETL Mappings, Data Modeling, Creating BI Reports and Dashboards. Highly familiar with Cognos BI Administration, Architecture and Deployment.}
+\end{center}
 
-\begin{minipage}[t]{0.33\textwidth} 
+\vspace{-1em}
+\noindent\fcolorbox{light-gray}{light-gray}{
+\begin{minipage}[t]{0.31\textwidth} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!5]
 
+\section{Areas of Expertise}
+\vspace{\topsep}
+\begin{tightemize}
+\item Problem Solving
+\item Data Analysis
+\item Root Cause Analysis
+\item Incident Management
+\item Multi-tasking
+\item Communication Skills
+\item Troubleshooting
+\item Research
+\item Self-starter
+\end{tightemize}
+\end{mdframed}
+\vspace{-1.13em}
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!5]
+\section{Skills}
+\subsection{Languages}
+SQL \textbullet{}   T-SQL \textbullet{} PL/SQL \textbullet{} C \textbullet{}   C++\\ Java 
+\textbullet{} ASP .NET \textbullet{}   Python \\  UNIX Shell Scripting 
+
+\sectionsep
+
+\subsection{Databases}
+Oracle 12c/11g/10g/9i \textbullet{} MySQL \\
+SQL Server 2008 R2/2008/2005\\
+DB2 \textbullet{} Microsoft Access
+
+\sectionsep
+
+\subsection{BI Tools}
+IBM Cognos \textbullet{}   Business Objects  \\
+SQL Server Reporting Services
+\sectionsep
+\subsection{ETL Tools}
+IBM Datastage \textbullet{} Informatica\\
+SQL Server Integration Services
+\sectionsep
+
+\subsection{Software}
+TOAD \textbullet{} Microsoft Visual Studio\\
+Microsoft Excel
+\sectionsep
+
+\subsection{Methodologies}
+SDLC - Waterfall \textbullet{} Agile \textbullet{} Scrum
+\end{mdframed}
+\vspace{-1.13em}
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!5]
 \section{Education} 
 
-\subsection{HKUST}
-\descript{Exchange Semester, Spring 2015}
-\location{June 2015 | Kowloon, Hong Kong \\ Cum. GPA: N/A}
+\subsection{Florida State University}
+\descript{Masters in Computer Science}
+\location{Aug 2016 | Tallahassee, FL, USA \\ GPA: 3.68}
 \sectionsep
 
-\subsection{KAIST,  Daejeon}
-\descript{BSc. in Electrical Engineering}
-\descript{Minor in Business and Mgmt.}
-\location{Expected June 2016 | South Korea}
-\location{ Cum. GPA: 3.13/4.3}
-\sectionsep
-
-
-\subsection{Global Indian Intl. School}
-\location{Grad. May 2012 | Singapore}
-\location{International Baccalaureate Diploma Program | 36/45} 
-\sectionsep
-\subsection{Kendriya Vidyalaya No.2}
-\location{Grad. May 2010 |  Kharagpur, India}
-\location{All India Secondary School Examination | 10/10 CGPA} 
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Coursework}
-\subsection{Electrical Engineering}
-Circuit Theory \\
-Signals and Systems \\
-Digital Circuit Design  \\
-Computer Organization \\
-Programming structure \\
-Introduction to Robotics\\
-Probability and Stochastic Processes\\
-\sectionsep
-
-\subsection{Business and Management}
-Introduction to Business and management \\
-Organizational Behavior \\
-Management Information Systems\\
-Microeconomics\\
-Macroeconomics\\
-\sectionsep
-
-
-\subsection{MOOC}
-Introduction to Linux\\
-Entrepreneurship\\
-Corporate Strategy\\
-%\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-Event Management\\
-Resource planning\\
-Public Relations\\
-Promotion\\
-\sectionsep
-
-
-\subsection{CO-CURRICULAR ACTIVITIES}
-Debating\\
-Volunteering\\
-Soccer\\
-Long Distance Running\\
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{International Experience}
-
-\runsubsection{CONFERENCES}
-\descript{| Business and Entrepreneurship}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\subsection{Sreenidhi Institute of}
+\subsection{Science \& Technology}
+\descript{Bachelors in Information}
+\descript{Technology}
+\location{Apr 2011 | Hyderabad, AP, INDIA}
+\location{GPA: 3.2}
+\end{mdframed}
+\end{minipage} }
+\noindent\fcolorbox{light-gray}{light-gray}{
+\begin{minipage}[t]{0.64\textwidth} 
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!5]
+\section{Professional Work Experience}
+\runsubsection{Tech Mahindra Ltd.}
+\descript{| BI/ETL Developer}
+\location{Sep 2011 - Jul 2014 | Hyderabad, AP, INDIA}
 \begin{tightemize} 
-\item Delegate to Global Initiative Symposium (GIS) at NTU, Taiwan, 2013
-\item Represented KAIST on a cultural trip to Shanghai and Hangzhou, 2013
-\item Delegate to 7th Singapore International Model UN conference, 2011
-\item One among 80 students selected from across all over India as member of delegation to Japan, JENESYS Cultural Exchange Programme, 2010
-%\item Presented at India Innovation Growth Programme by Lockheed Martin
-%\item Underwent a one-on-one presentation skills workshop by Ms. Donna Lipman 
+\item Involved in the End-to-end Data warehouse design, creating facts and dimensions for building the Data warehouse application.
+\item Collaborated with Business Analysts to gather requirements, Business rules and specifications to ensure reporting requirements are met.
+\item Involved in all phases SDLC: Requirements Gathering, Analysis, Design, Implementation, Testing \& Deployment.
+
+\item Developed and Implemented BI Reports using Cognos Report studio, Query Studio and Analysis Studio as per the Technical requirements.
+
+\item Served as a primary point of contact by multi-tasking and taking accountability for Customer support environment issues including Operational, Application support and also providing end user support for reporting data solutions.
+
+\item Extensively used Extract Transform Load (ETL) methodologies for Data extraction, Data Quality, Data Integrity, Data transformation and Data Processing using SQL Server Integration Services (SSIS) and Datastage.
+
+\item Designed Data warehouse models – Star schema and Snowflake schema, facts, dimensions, cubes using Cognos Transformer.
+
+\item Installed, configured, upgraded, maintained Cognos 8.4, Cognos 10.2.1 BI in a distributed windows environment.
+
+\item Performed daily Cognos activities such as report/package/cube publishing, manage internal customer access and monitor schedules.
+
+\item Proactively monitored application and troubleshooted any performance issues like High CPU Utilization, Disk Space utilization.
+
+\item Worked with Database Administration team to understand and address Cognos BI reporting performance issues.
+
 \end{tightemize}
-%\sectionsep
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     RESEARCH
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{mdframed}
+\vspace{-1.26em}
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!5]
+\section{Entry Level Training Program}
+\runsubsection{Tech Mahindra Ltd.}
+\descript{| BIDW Trainee}
+\location{ May 2011 - Aug 2011 | Bhubaneswar, OR, INDIA}
 
-\section{Positions of Responsibility}
-\runsubsection{KAIST Intl. Students’ Association (KISA)}
-\descript{| Head, Promotions}
-\location{2013- 2014 | Daejeon, S. Korea}
-\begin{tightemize} 
-\item Initiated and coordinated talks between the International Students Office, ISSS and local food vendors; negotiated the contract for the establishment of a “Halal” catering service. Due to start operations on campus by March, 2015
-\item Conceived and implemented the idea of course recommender webpage for the students; providing a medium of communication with seniors, peers and alumni
-\item Coordinated the "KISA Movie Nights" event and devised a mechanism in order to increase the turnover of participants through emails, flyers and SNS as well
-\item Reviewed and contributed to the Orientation Booklet for all Intl. Freshmen 
+\begin{tightemize}
+\item Trained in courses like RDBMS, UNIX, Datawarehouse Concepts.
+\item Acquired strong knowledge in Data warehousing and Business Intelligence by implementing case studies using Informatica and Business Objects.
 \end{tightemize}
-%\sectionsep
+\end{mdframed}
+\vspace{-1.26em}
+\begin{mdframed}[hidealllines=true,backgroundcolor=gray!5]
+\section{University Work Experience}
+\runsubsection{Florida State University}
+\descript{| Researcher/Teaching Assistant}
+\location{ Jan 2015- Aug 2016 | Tallahassee, FL, USA}
+\begin{tightemize}
+\item Tweaked the java code to add new features to the Space Fortress game which helped in conducting experiments on Cognitive thinking.
 
-\runsubsection{The KAIST Herald}
-\descript{| International Reporter}
-\location{March 2013 – December 2014 | Daejeon, South Korea}
-\begin{tightemize} 
-\item Conceived Voice of the Campus :  a platform to identify issues that need prompt attention, helping students seek response from responsible authorities. Led to the first ever representation of International students in the UG student council 
-\item Highlighted issues of importance such as need for career oriented awareness in the student community. Resulted in an increase in the number of job forum and workshops organized by the Intl. Students Office and the Intl. Relations Team
-\item Devised an effective planning and distribution mechanism for strengthening readership on campus and generated significantly improved public outreach. 
+\item Assisted in Troubleshooting UNIX Server Issues.
+
+\item Involved in the Data Analysis of biological images by writing Python and UNIX Shell scripts.
+
+\item Held help-lab hours for individual student consultations about assignments and grades related to Microsoft Office.
+
 \end{tightemize}
-%\sectionsep
-
-\runsubsection{Rotary Club, Singapore }
-\descript{| Interact Club Member}
-\location{January 2011 – March 2012 | Singapore}
-\begin{tightemize} 
-\item Completed a 1- week social service trip to The Que Huong Charity Center, Ho Chi Minh city,Vietnam, undertaking the role of student coordinator.Helped raise a donation amount of 1800 Singapore Dollars for donation to the charity center 
-\item Contributed to the SINDA Read Program, an initiative for teaching kids from low income families and differently-abled children over a period of 4 months 
-\end{tightemize}
-%\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     RESEARCH
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{RESEARCH PROJECT}
-\runsubsection{Image inpainting}
-\descript{| Research Assistant}
-\location{ July 2014- August 2014 | KAIST}
-Completed project "Robust procurement of image data in image inpainting using an online image database" under the supervision of Prof. Yong Man Ro. Applications in obtaining lost or degraded information from images along with 2-D reconstruction.
+\end{mdframed}
 
 %\sectionsep
 
 
-\section{Achievements and Awards} 
-\begin{tabular}{rll}
-2015     & One among 4 UG students chosen for a Semester Exchange Program to HKUST\\ 
-2012     & Awarded a full scholarship for 4 years to pursue Undergraduate studies at KAIST\\
-2011     & Awarded the title of “Best Interactor of the Year 2011” by Rotary Club, Singapore\\ 
-2010     & One among 8 students from across India to be awarded the GIF scholarship\\
-2010     & Awarded the Amul Vidya Bhushan for securing A1’s in all subjects in the AISSE\\
-2009     & Secured an All India Rank (AIR) 581 in National Science Talent Search Examination\\  
-
-\end{tabular}
-\sectionsep\textbf{}
-
-
-\end{minipage} 
+\end{minipage} }
 \end{document}  \documentclass[]{article}
